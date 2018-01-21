@@ -1,7 +1,10 @@
 class ContactsController < ApplicationController
+  # actions in a Rails controller are typically in the order:
+  # index, show, new, edit, create, update, destroy
 
-  # def index
-  # end
+  def index
+    @contacts = Contact.all
+  end
 
   def show
   # the id parameter is automatically created in the model,
