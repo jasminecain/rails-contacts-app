@@ -17,7 +17,7 @@ class ContactsController < ApplicationController
   end
 
   def edit
-    @contact = Contact..find(params[:id])
+    @contact = Contact.find(params[:id])
   end
 
   def create
@@ -47,4 +47,10 @@ class ContactsController < ApplicationController
     @contact.destroy
     redirect_to :action => 'index'
   end
+
+  private
+  def contact_info
+    params.require(:contact).permit(:name, :phone)
+  end
+
 end

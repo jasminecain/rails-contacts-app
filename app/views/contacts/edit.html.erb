@@ -1,0 +1,28 @@
+<h1>Edit Contact</h1>
+
+<%= form_for :contact, url: contact_path(@contact),
+    method: :patch do |f| %>
+
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+    <h3>Error(s):</h3>
+    <ul>
+      <% @contact.errors.full_messages.each do |messages| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br/ >
+    <%= f.text_field :name %><br/ >
+  </p>
+  <p>
+    <%= f.label :phone %><br/ >
+    <%= f.text_field :phone %><br/ >
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
