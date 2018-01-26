@@ -16,6 +16,12 @@ _path  %>
   <tr>
     <td><%= c.name %></td>
     <td><%= c.phone %></td>
+    <td><%= link_to 'Show', contact_path(c) %></td>
+    <td><%= link_to 'Edit', edit_contact_path(c) %></td>
+    <td><%= link_to 'Delete', contact_path(c),
+            method: :delete,
+            data: { confirm: 'Really Delete?' } %>
+    </td>
   </tr>
   <% end %>
 </table>

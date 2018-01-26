@@ -1,5 +1,15 @@
 <h1>Add new contacts here...</h1>
 <%= form_for :contact, url: contacts_path do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanantion">
+      <h3>Error(s):</h3>
+      <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <p>
     <%= f.label :name %><br/>
     <%= f.text_field :name %>
