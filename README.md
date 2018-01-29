@@ -1,24 +1,26 @@
-# README
+# Contacts App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is built with Ruby on Rails.
 
-Things you may want to cover:
+### Description:
+A web app that holds your contacts name and number with CRUD functionality.
 
-* Ruby version
+### Prerequisites
+- Node v6.11.0
+- NPM >= v5.3.0
+- Gemfile
 
-* System dependencies
+### Spin up
+```bash
+bundle install
+rails db:migrate
+rails db:seed
+```
+### Staging
 
-* Configuration
+You'll need to run rails server to run the Contacts in your browser by opening a new terminal tab and running:
 
-* Database creation
+```bash
+rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
